@@ -161,13 +161,27 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-              When should I  NOT choose React?
+              When should I NOT choose React?
           </Heading>
           <List>
             <Appear><ListItem>When you DON'T have a lot of time</ListItem></Appear>
             <Appear><ListItem>When you want sprinkles of javascript</ListItem></Appear>
-            <Appear><ListItem>When you want amazing components</ListItem></Appear>
-            <Appear><ListItem>When you want consistent design</ListItem></Appear>
+            <Appear><ListItem>When you don't have to manage state</ListItem></Appear>
+            <Appear><ListItem>When you don't like tooling</ListItem></Appear>
+            <Appear><ListItem>When you can't handle JSX</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+              Basic building blocks of react 
+          </Heading>
+          <List>
+            <Appear><ListItem>JSX Components</ListItem></Appear>
+            <Appear><ListItem>States & Props</ListItem></Appear>
+            <Appear><ListItem>The Component Lifecycle</ListItem></Appear>
+            <Appear><ListItem>Component Design</ListItem></Appear>
+            <Appear><ListItem>The render method</ListItem></Appear>
           </List>
         </Slide>
         
