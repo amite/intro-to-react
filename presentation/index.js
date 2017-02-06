@@ -23,9 +23,12 @@ require("../default/index.css");
 
 const images = {
   city: require("../assets/city.jpg"),
+  dancer: require("../assets/theme-background.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  tree: require("../assets/component-tree.png"),
+  tree2: require("../assets/component-tree-2.png")
 };
 
 preloader(images);
@@ -33,8 +36,9 @@ preloader(images);
 const theme = createTheme({
   primary: "white",
   secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quartenary: "#CECECE"
+  tertiary: "#24204B",
+  quartenary: "#CECECE",
+  light: '#665eb9'
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -44,14 +48,14 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="primary">
+        <Slide transition={["zoom"]} bgImage={images.dancer.replace("/", "")} bgDarken={0.2}>
           <Text margin="10px 0 0" textColor="quartenary" size={1} fit bold caps>
             Welcome to
           </Text>
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+          <Heading size={1} fit caps lineHeight={1} textColor="primary">
             React
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="light" size={1} fit bold>
             An Introduction for absolute beginners
           </Text>
         </Slide>
@@ -107,33 +111,50 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
+        <Slide>
+          <Heading  margin="0px auto 40px" size={2} fit caps lineHeight={1} textColor="secondary">
+            Build Atomic Components
+          </Heading>
+          <Appear><Image src={images.tree.replace("/", "")}  height="293px"/></Appear>
+          <Appear><Image src={images.tree2.replace("/", "")}  height="293px"/></Appear>
+        </Slide>
+
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+            Let's build Facebook with React
+          </Heading>
+          <Appear>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../assets/facebook.example")}
+            margin="20px auto"
+          />
+          </Appear>
+        </Slide>
+
         <Slide transition={["zoom", "slide"]} bgColor="tertiary">
           <Heading size={1} fit caps lineHeight={1} textColor="primary">
             What does that mean?
           </Heading>
-          <Markdown textColor="secondary">
-            {`
-  * Build front end components
-  * Render front end components
-  * Handle user interactions
-  * Update components on state change
-            `}
-          </Markdown>
+           <List textColor="primary">
+             <Appear><ListItem>Build front end components</ListItem></Appear>
+             <Appear><ListItem>Render front end components</ListItem></Appear>
+             <Appear><ListItem>Handle user interactions</ListItem></Appear>
+             <Appear><ListItem>Update components on state change</ListItem></Appear>
+           </List>
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
             So how do I...?
           </Heading>
-          <Markdown textColor="tertiary">
-            {`
-  * Work with data and models?
-  * Manipulate business logic?
-  * Manipulate the DOM?
-  * Add Routing to pages?
-  * Animate the DOM?
-            `}
-          </Markdown>
+          <List>
+             <Appear><ListItem>Work with data and models?</ListItem></Appear>
+             <Appear><ListItem>Manipulate business logic?</ListItem></Appear>
+             <Appear><ListItem>What about Forms?</ListItem></Appear>
+             <Appear><ListItem>Manipulate the DOM?</ListItem></Appear>
+             <Appear><ListItem>Add Routing to pages?</ListItem></Appear>
+           </List>
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="primary">
@@ -156,6 +177,7 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>When you are building a SPA</ListItem></Appear>
             <Appear><ListItem>When you want amazing components</ListItem></Appear>
             <Appear><ListItem>When you want consistent design</ListItem></Appear>
+            <Appear><ListItem>You need performance (Virtual DOM)</ListItem></Appear>
           </List>
         </Slide>
 
@@ -167,9 +189,17 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>When you DON'T have a lot of time</ListItem></Appear>
             <Appear><ListItem>When you want sprinkles of javascript</ListItem></Appear>
             <Appear><ListItem>When you don't have to manage state</ListItem></Appear>
-            <Appear><ListItem>When you don't like tooling</ListItem></Appear>
+            <Appear><ListItem>When you dislike advanced tooling</ListItem></Appear>
             <Appear><ListItem>When you can't handle JSX</ListItem></Appear>
           </List>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="black">
+          <BlockQuote>
+            <Quote>Choosing between Angular and React is like choosing between buying an off-the-shelf computer
+             and building your own with off-the-shelf parts.</Quote>
+            <Cite>Cory House <a href="https://medium.freecodecamp.com/angular-2-versus-react-there-will-be-blood-66595faafd51#.f08yugsfp">Angular2 vs React</a></Cite>
+          </BlockQuote>
         </Slide>
 
         <Slide>
@@ -185,6 +215,25 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         
+        <Slide transition={["zoom", "slide"]} bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+            How do I start right now with React?
+          </Heading>
+
+          <Heading size={1} fit lineHeight={1} textColor="secondary">
+            Create React App
+          </Heading>
+          <a href="https://github.com/facebookincubator/create-react-app">
+            https://github.com/facebookincubator/create-react-app
+          </a>
+        </Slide>
+          
+        <Slide>
+          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+            Demo Time 😅
+          </Heading>
+        </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
             

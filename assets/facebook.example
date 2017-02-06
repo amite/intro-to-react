@@ -1,0 +1,10 @@
+return (
+  <Facebook>
+    <Wall>
+      <Posts>
+        <Post>
+        </Post>
+      </Posts>
+    </Wall>
+  </Facebook>
+)
