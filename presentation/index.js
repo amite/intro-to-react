@@ -119,6 +119,8 @@ export default class Presentation extends React.Component {
           <Appear><Image src={images.tree2.replace("/", "")}  height="293px"/></Appear>
         </Slide>
 
+
+
         <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Let's build Facebook with React
@@ -130,6 +132,17 @@ export default class Presentation extends React.Component {
             margin="20px auto"
           />
           </Appear>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="black">
+          <BlockQuote>
+            <Quote textSize="1em" lineHeight={2}>Using React you simply express how your app 
+            should look based on your data at any given point in time.
+            When your data changes React handles automatically all the UI updates, saving you from 
+            imperatively manipulate the DOM. Which makes React very simple and declarative.
+            </Quote>
+            <Cite>Osmel Mora <a href="https://medium.com/react-ecosystem/react-a-gentle-introduction-407fb59d3514#.n82suggdc">React, a gentle introduction.</a></Cite>
+          </BlockQuote>
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="tertiary">
@@ -178,6 +191,8 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>When you want amazing components</ListItem></Appear>
             <Appear><ListItem>When you want consistent design</ListItem></Appear>
             <Appear><ListItem>You need performance (Virtual DOM)</ListItem></Appear>
+            <Appear><ListItem>Want Code that is maintainable</ListItem></Appear>
+            <Appear><ListItem>Code that is easier to reason about</ListItem></Appear>
           </List>
         </Slide>
 
