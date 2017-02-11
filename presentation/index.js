@@ -223,6 +223,20 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>How do they look like?</ListItem></Appear>
           </List>
         </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../assets/jsx-example")}
+            margin="20px auto"
+          />
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../assets/jsx-compiles-example")}
+            margin="20px auto"
+          />
+        </Slide>
         <Slide transition={["zoom", "slide"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             How do I start right now with React?
