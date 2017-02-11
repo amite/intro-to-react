@@ -1,0 +1,7 @@
+class MyApp extends React.Component {
+  render() {
+    return (
+      <MyButton color="blue" shadowSize={2}>Click Me</MyButton>
+    );
+  }
+}
