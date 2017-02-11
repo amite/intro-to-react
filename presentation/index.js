@@ -215,6 +215,14 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         
+         <Slide>
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+              JSX Components 
+          </Heading>
+          <List>
+            <Appear><ListItem>How do they look like?</ListItem></Appear>
+          </List>
+        </Slide>
         <Slide transition={["zoom", "slide"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             How do I start right now with React?
