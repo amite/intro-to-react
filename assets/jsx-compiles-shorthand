@@ -1,0 +1,12 @@
+class Hello extends React.Component {
+  render() {
+    return React.createElement('div', null, `Hello ${this.props.toWhat}`);
+  }
+}
+
+const e = React.createElement;
+
+ReactDOM.render(
+  e('div', null, 'Hello World'),
+  document.getElementById('root')
+);
