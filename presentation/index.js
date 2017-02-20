@@ -28,7 +28,8 @@ const images = {
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png"),
   tree: require("../assets/component-tree.png"),
-  tree2: require("../assets/component-tree-2.png")
+  tree2: require("../assets/component-tree-2.png"),
+  uiasstate: require("../assets/ui-as-state.jpg")
 };
 
 preloader(images);
@@ -106,9 +107,15 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            React is the V of MVC
+          <Heading size={2} fit caps lineHeight={1} textColor="secondary">
+            React is a way of expressing your "application’s UI"
           </Heading>
+          <Appear>
+            <Text margin="10px 0 50px" textColor="quartenary" size={1} fit bold>
+            as a pure function of application state.
+          </Text>
+          </Appear>
+          <Appear><Image src={images.uiasstate.replace("/", "")}  height="293px"/></Appear>
         </Slide>
 
         <Slide>
@@ -123,7 +130,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Let's build Facebook with React
+            Lets build Facebook with React
           </Heading>
           <Appear>
           <CodePane
