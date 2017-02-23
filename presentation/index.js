@@ -298,6 +298,20 @@ export default class Presentation extends React.Component {
           />
         </Slide>
 
+        <Slide>
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+              Life Cycle of React Component
+          </Heading>
+          <List>
+            <Appear><ListItem>componentWillMount</ListItem></Appear>
+            <Appear><ListItem>shouldComponentUpdate</ListItem></Appear>
+            <Appear><ListItem>componentWillUpdate</ListItem></Appear>
+            <Appear><ListItem>componentDidUpdate</ListItem></Appear>
+            <Appear><ListItem>componentWillReceiveProps</ListItem></Appear>
+            <Appear><ListItem>componentWillUnmount</ListItem></Appear>
+          </List>
+        </Slide>
+
 
         <Slide transition={["zoom", "slide"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
