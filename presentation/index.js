@@ -325,6 +325,15 @@ export default class Presentation extends React.Component {
             https://github.com/facebookincubator/create-react-app
           </a>
         </Slide>
+
+
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane textSize="18px"
+            lang="jsx"
+            source={require("raw-loader!../assets/react-app-install")}
+            margin="20px auto"
+          />
+        </Slide>
           
         <Slide>
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
