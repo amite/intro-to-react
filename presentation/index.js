@@ -70,8 +70,8 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>What is React?</ListItem></Appear>
             <Appear><ListItem>When should I choose it?</ListItem></Appear>
             <Appear><ListItem>When should I not to choose it!?</ListItem></Appear>
-            <Appear><ListItem>Basic building blocks of react</ListItem></Appear>
             <Appear><ListItem>How do I start?</ListItem></Appear>
+            <Appear><ListItem>Basic building blocks of react</ListItem></Appear>
             <Appear><ListItem>Live code demo</ListItem></Appear>
             <Appear><ListItem>Where to go next?</ListItem></Appear>
           </List>
@@ -79,13 +79,10 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["slide"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-            So what is react?
-          </Heading>
-        </Slide>
-
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
             I asked people
+          </Heading>
+          <Heading size={3} fit caps lineHeight={1} textColor="tertiary">
+            So what do you think react is?
           </Heading>
           <Text margin="10px 0 0" textColor="quartenary" size={1} fit bold>
             Here is what they said
@@ -96,7 +93,7 @@ export default class Presentation extends React.Component {
               <List>
                 <Appear><ListItem>a front end JavaScript framework</ListItem></Appear>
                 <Appear><ListItem>a substitute for Angular </ListItem></Appear>
-                <Appear><ListItem>a substitute for jQuery</ListItem></Appear>
+                <Appear><ListItem>a replacement for jQuery</ListItem></Appear>
                 <Appear><ListItem>library for faster DOM manipulation</ListItem></Appear>
                 <Appear><ListItem>a way to build fast user interfaces</ListItem></Appear>
                 <Appear><ListItem>a way to build web components</ListItem></Appear>
@@ -106,39 +103,22 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+            So what is react?
+          </Heading>
+        </Slide>
+
         <Slide transition={["zoom", "slide"]} bgColor="primary">
           <Heading size={2} fit caps lineHeight={1} textColor="secondary">
-            React is a way of expressing your "application’s UI"
+            JavaScript library for building user interfaces
           </Heading>
           <Appear>
-            <Text margin="10px 0 50px" textColor="quartenary" size={1} fit bold>
-            as a pure function of application state.
-          </Text>
+            <Text margin="10px 0 50px" textColor="tertiary" size={1} fill bold>
+            React helps you build UI Components that automatically update and render when the state of your application changes
+            </Text>
           </Appear>
-          <Appear><Image src={images.uiasstate.replace("/", "")}  height="293px"/></Appear>
-        </Slide>
-
-        <Slide>
-          <Heading  margin="0px auto 40px" size={2} fit caps lineHeight={1} textColor="secondary">
-            Build Atomic Components
-          </Heading>
-          <Appear><Image src={images.tree.replace("/", "")}  height="293px"/></Appear>
-          <Appear><Image src={images.tree2.replace("/", "")}  height="293px"/></Appear>
-        </Slide>
-
-
-
-        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Lets build Facebook with React
-          </Heading>
-          <Appear>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/facebook.example")}
-            margin="20px auto"
-          />
-          </Appear>
+  
         </Slide>
 
         <Slide transition={["slide"]} bgColor="black">
@@ -152,9 +132,37 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
 
+        <Slide>
+          <Appear>
+            <Heading margin="10px 0 50px" textColor="tertiary" size={5}  bold>
+            Key Idea behind building applications with React 
+            </Heading>
+          </Appear>
+          <Appear><Heading  margin="0px auto 40px" size={4} fit caps lineHeight={1} textColor="secondary">
+            Atomic Components
+          </Heading></Appear>
+          <Appear><Image src={images.tree.replace("/", "")}  height="293px"/></Appear>
+          <Appear><Image src={images.tree2.replace("/", "")}  height="293px"/></Appear>
+        </Slide>
+
+
+
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+            Lets build Facebook with React
+          </Heading>
+          <Appear>
+          <CodePane textSize="24"
+            lang="jsx"
+            source={require("raw-loader!../assets/facebook.example")}
+            margin="20px auto"
+          />
+          </Appear>
+        </Slide>
+
         <Slide transition={["zoom", "slide"]} bgColor="tertiary">
           <Heading size={1} fit caps lineHeight={1} textColor="primary">
-            What does that mean?
+            What can React do for me?
           </Heading>
            <List textColor="primary">
              <Appear><ListItem>Build front end components</ListItem></Appear>
@@ -241,31 +249,56 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
               JSX Components 
           </Heading>
+          <Appear><Text>JavaScript Syntax Extension</Text></Appear>
           <List>
-            <Appear><ListItem>How do they look like?</ListItem></Appear>
+            <Appear><ListItem>What are they?</ListItem></Appear>
+            <Appear><ListItem>What do they look like?</ListItem></Appear>
           </List>
         </Slide>
         <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-          <CodePane
+          <CodePane textSize="22px"
             lang="jsx"
             source={require("raw-loader!../assets/jsx-example")}
             margin="20px auto"
           />
         </Slide>
+        <Slide>
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+              Props
+          </Heading>
+        </Slide>
+
         <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-          <CodePane
+          <CodePane textSize="22px"
             lang="jsx"
-            source={require("raw-loader!../assets/jsx-compiles-example")}
+            source={require("raw-loader!../assets/props-example")}
             margin="20px auto"
           />
         </Slide>
+
         <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-          <CodePane
+          <CodePane textSize="22px"
             lang="jsx"
-            source={require("raw-loader!../assets/jsx-compiles-shorthand")}
+            source={require("raw-loader!../assets/props-child-example")}
             margin="20px auto"
           />
         </Slide>
+        
+        <Slide>
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+              State
+          </Heading>
+        </Slide>
+
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane textSize="18px"
+            lang="jsx"
+            source={require("raw-loader!../assets/state-example")}
+            margin="20px auto"
+          />
+        </Slide>
+
+
         <Slide transition={["zoom", "slide"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             How do I start right now with React?

@@ -1,0 +1,14 @@
+class AppHeader extends Component {
+ 
+ constructor(){
+  super();
+ }
+
+ render() {
+   return (
+       <div className="App-header">
+         <h2>{this.props.text}</h2>
+       </div>
+   );
+ }
+}

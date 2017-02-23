@@ -1,0 +1,25 @@
+class AppHeader extends Component {
+ 
+ constructor(){
+  super();
+  this.state = {
+    text: "Say Something"
+  }
+
+   this.update = this.update.bind(this)
+ }
+
+
+ update(e){
+  this.setState({text: e.target.value})
+ }
+
+ render() {
+   return (
+       <div className="App-header">
+         <input type="text" onChange={ this.update }/>
+         <p>{this.state.text}</p>
+       </div>
+   );
+ }
+}
