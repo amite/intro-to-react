@@ -29,7 +29,11 @@ const images = {
   markdown: require("../assets/markdown.png"),
   tree: require("../assets/component-tree.png"),
   tree2: require("../assets/component-tree-2.png"),
-  uiasstate: require("../assets/ui-as-state.jpg")
+  uiasstate: require("../assets/ui-as-state.jpg"),
+  mehcat: require("../assets/mehcat.jpg"),
+  understanding: require("../assets/understanding.jpg"),
+  vue: require("../assets/vue.png"),
+  cra: require("../assets/create-react-app.png")
 };
 
 preloader(images);
@@ -77,16 +81,23 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
+        <Slide>
+          <Image src={images.understanding.replace("/", "")} />
+        </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+            I am a big believer in research
+          </Heading>
+          <Appear><Heading size={1} fit caps lineHeight={1} textColor="secondary">
             I asked people
-          </Heading>
-          <Heading size={3} fit caps lineHeight={1} textColor="tertiary">
-            So what do you think react is?
-          </Heading>
-          <Text margin="10px 0 0" textColor="quartenary" size={1} fit bold>
+          </Heading></Appear>
+          <Appear><Heading size={3} fit caps lineHeight={1} textColor="tertiary">
+            So what do you think react is?</Heading></Appear>
+          
+          <Appear><Text margin="10px 0 0" textColor="quartenary" size={1} fit bold>
             Here is what they said
-          </Text>
+          </Text></Appear>
 
           <Layout>
             <Fill>
@@ -103,27 +114,40 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
+        <Slide>
+          <Heading size={1} margin="10px 0 50px"> I was like...</Heading>
+          <Appear><Image src={images.mehcat.replace("/", "")} height="320px"  /></Appear>
+        </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-            So what is react?
+          <Heading size={5} caps lineHeight={1} textColor="tertiary">
+            React is something Simpler and Smaller than that
           </Heading>
+          <Appear><Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+            So what is react?
+          </Heading></Appear>
         </Slide>
 
         <Slide transition={["zoom", "slide"]} bgColor="primary">
-          <Heading size={2} fit caps lineHeight={1} textColor="secondary">
+          <Heading size={4}  caps lineHeight={1} textColor="secondary" margin="10px 0 50px">
             JavaScript library for building user interfaces
           </Heading>
+          <Appear><Heading size={5}  caps lineHeight={1} textColor="secondary" margin="10px 0 50px">
+            What does React do?
+          </Heading></Appear>
           <Appear>
-            <Text margin="10px 0 50px" textColor="tertiary" size={1} fill bold>
-            React helps you build UI Components that automatically update and render when the state of your application changes
+            <Text margin="10px 0 50px" lineHeight={1.2} textColor="tertiary" size={1} fill bold>
+            It helps you build UI Components that automatically update and render when the state of your application changes
             </Text>
           </Appear>
   
         </Slide>
 
+
+
         <Slide transition={["slide"]} bgColor="black">
-          <BlockQuote>
-            <Quote textSize="1em" lineHeight={2}>Using React you simply express how your app 
+          <BlockQuote lineHeight={3}>
+            <Quote textSize="1em" lineHeight={3}>Using React you simply express how your app 
             should look based on your data at any given point in time.
             When your data changes React handles automatically all the UI updates, saving you from 
             imperatively manipulate the DOM. Which makes React very simple and declarative.
@@ -132,19 +156,39 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
 
+        <Slide transition={["zoom", "slide"]} bgColor="primary">
+          <Heading size={6} textSize={21}  caps lineHeight={1} textColor="secondary" margin="10px 0 50px">
+            How you write your vanilla JS and jQuery Today
+          </Heading>
+          <CodePane textSize="22"
+            lang="jsx"
+            source={require("raw-loader!../assets/jquery-1")}
+            margin="20px auto"
+          />
+          <Appear><Heading size={6} textSize={21}  caps lineHeight={1} textColor="secondary" margin="10px 0 50px">
+            How react works
+          </Heading></Appear>
+
+          <Appear><CodePane textSize="22"
+            lang="jsx"
+            source={require("raw-loader!../assets/react-vs-jquery")}
+            margin="20px auto"
+          /></Appear>
+
+
+        </Slide>
+
         <Slide>
-          <Appear>
-            <Heading margin="10px 0 50px" textColor="tertiary" size={5}  bold>
-            Key Idea behind building applications with React 
-            </Heading>
-          </Appear>
+          <Heading margin="10px 0 50px" textColor="tertiary" size={5}  bold>
+          Core Concept in thinking with React 
+          </Heading>
+          
           <Appear><Heading  margin="0px auto 40px" size={4} fit caps lineHeight={1} textColor="secondary">
             Atomic Components
           </Heading></Appear>
           <Appear><Image src={images.tree.replace("/", "")}  height="293px"/></Appear>
           <Appear><Image src={images.tree2.replace("/", "")}  height="293px"/></Appear>
         </Slide>
-
 
 
         <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
@@ -160,6 +204,7 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
+
         <Slide transition={["zoom", "slide"]} bgColor="tertiary">
           <Heading size={1} fit caps lineHeight={1} textColor="primary">
             What can React do for me?
@@ -169,6 +214,7 @@ export default class Presentation extends React.Component {
              <Appear><ListItem>Render front end components</ListItem></Appear>
              <Appear><ListItem>Handle user interactions</ListItem></Appear>
              <Appear><ListItem>Update components on state change</ListItem></Appear>
+             <Appear><ListItem>That's It</ListItem></Appear>
            </List>
         </Slide>
 
@@ -225,11 +271,21 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="black">
-          <BlockQuote>
+          <BlockQuote lineHeight={3}>
             <Quote>Choosing between Angular and React is like choosing between buying an off-the-shelf computer
              and building your own with off-the-shelf parts.</Quote>
             <Cite>Cory House <a href="https://medium.freecodecamp.com/angular-2-versus-react-there-will-be-blood-66595faafd51#.f08yugsfp">Angular2 vs React</a></Cite>
           </BlockQuote>
+        </Slide>
+
+        <Slide>
+          <Heading size={6} caps lineHeight={1} textColor="secondary">
+              I don't have the time
+          </Heading>
+          <Heading size={3} fit margin="10px 0 50px"  caps lineHeight={1} textColor="tertiary">
+              What should You choose instead of React?
+          </Heading>
+          <Appear><Image src={images.vue.replace("/", "")}  height="293px"/></Appear>
         </Slide>
 
         <Slide>
@@ -238,10 +294,9 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
             <Appear><ListItem>JSX Components</ListItem></Appear>
-            <Appear><ListItem>States & Props</ListItem></Appear>
+            <Appear><ListItem>State</ListItem></Appear>
+            <Appear><ListItem>Props</ListItem></Appear>
             <Appear><ListItem>The Component Lifecycle</ListItem></Appear>
-            <Appear><ListItem>Component Design</ListItem></Appear>
-            <Appear><ListItem>The render method</ListItem></Appear>
           </List>
         </Slide>
         
@@ -256,6 +311,9 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <Heading size={5} caps lineHeight={1} textColor="tertiary">
+              JSX is the UI
+          </Heading>
           <CodePane textSize="22px"
             lang="jsx"
             source={require("raw-loader!../assets/jsx-example")}
@@ -318,12 +376,16 @@ export default class Presentation extends React.Component {
             How do I start right now with React?
           </Heading>
 
-          <Heading size={1} fit lineHeight={1} textColor="secondary">
-            Create React App
-          </Heading>
-          <a href="https://github.com/facebookincubator/create-react-app">
+          <Link href="https://github.com/facebookincubator/create-react-app">
             https://github.com/facebookincubator/create-react-app
-          </a>
+          </Link>
+          <Image src={images.cra.replace("/", "")}  height="293px"/>
+          <Appear>
+            <Heading size={3} caps lineHeight={1} textColor="secondary">
+              Demo Time
+            </Heading>
+          </Appear>
+          <Appear><Text>😅</Text></Appear>
         </Slide>
 
 
@@ -336,10 +398,12 @@ export default class Presentation extends React.Component {
         </Slide>
           
         <Slide>
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Demo Time 😅
+          <Heading size={1} fit caps lineHeight={1} textColor="secondary" margin="10px 0 50px">
+            Want more JS in your life?
           </Heading>
+          <Link href="http://bit.ly/more-js" target="_blank">http://bit.ly/more-js</Link>
         </Slide>
+
 
         <Slide transition={["slide"]} bgColor="primary">
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
