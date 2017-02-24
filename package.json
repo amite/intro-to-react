@@ -13,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "netlify-cli": "^1.1.0",
     "normalize.css": "3.0.3",
     "prism": "^1.0.0",
     "react": "15.4.2",

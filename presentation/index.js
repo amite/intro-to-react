@@ -82,7 +82,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          <Image src={images.understanding.replace("/", "")} />
+          <Image src={images.understanding.replace("/", "")} height="700px" />
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary">
