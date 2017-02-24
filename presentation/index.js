@@ -305,10 +305,6 @@ export default class Presentation extends React.Component {
               JSX Components 
           </Heading>
           <Appear><Text>JavaScript Syntax Extension</Text></Appear>
-          <List>
-            <Appear><ListItem>What are they?</ListItem></Appear>
-            <Appear><ListItem>What do they look like?</ListItem></Appear>
-          </List>
         </Slide>
         <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
           <Heading size={5} caps lineHeight={1} textColor="tertiary">
@@ -368,6 +364,8 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>componentWillReceiveProps</ListItem></Appear>
             <Appear><ListItem>componentWillUnmount</ListItem></Appear>
           </List>
+
+          <Appear><Link href="http://codepen.io/eduardoboucas/full/jqWbdb/">React components lifecycle diagram</Link></Appear>
         </Slide>
 
 
@@ -380,12 +378,6 @@ export default class Presentation extends React.Component {
             https://github.com/facebookincubator/create-react-app
           </Link>
           <Image src={images.cra.replace("/", "")}  height="293px"/>
-          <Appear>
-            <Heading size={3} caps lineHeight={1} textColor="secondary">
-              Demo Time
-            </Heading>
-          </Appear>
-          <Appear><Text>😅</Text></Appear>
         </Slide>
 
 
@@ -395,8 +387,25 @@ export default class Presentation extends React.Component {
             source={require("raw-loader!../assets/react-app-install")}
             margin="20px auto"
           />
+          <Appear>
+            <Heading size={3} caps lineHeight={1} textColor="secondary">
+              Demo Time
+            </Heading>
+          </Appear>
+          <Appear><Text>😅</Text></Appear>
         </Slide>
-          
+
+        <Slide>
+          <Heading size={1}>Where to go next?</Heading>
+          <List>
+            <Appear><ListItem><Link href="https://www.fullstackreact.com/30-days-of-react/">30 Days of React</Link></ListItem></Appear>
+            <Appear><ListItem><Link textSize="38px" href="https://auth0.com/blog/glossary-of-modern-javascript-concepts/">Glossary of Modern JavaScript Concepts</Link></ListItem></Appear>
+            <Appear><ListItem><Link href="https://github.com/ericdouglas/ES6-Learning">ES6 Learning</Link></ListItem></Appear>
+            <Appear><ListItem><Link href="https://reactforbeginners.com/">React for Beginners</Link></ListItem></Appear>
+            <Appear><ListItem><Link href="https://flipboard.com/@amite/react-js-oqvpbu5ky">My React Magazine on Flipboard</Link></ListItem></Appear>
+          </List>
+        </Slide>          
+        
         <Slide>
           <Heading size={1} fit caps lineHeight={1} textColor="secondary" margin="10px 0 50px">
             Want more JS in your life?

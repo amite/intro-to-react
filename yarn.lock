@@ -5660,11 +5660,7 @@ supports-color@^3.1.0, supports-color@^3.1.2, supports-color@^3.2.3:
   dependencies:
     has-flag "^1.0.0"
 
-surge-ignore@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/surge-ignore/-/surge-ignore-0.2.0.tgz#5a7f8a20a71188cf9e75a2cfe8eb182de90daf3b"
-
-surge@latest:
+surge:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/surge/-/surge-0.18.0.tgz#1c4378c7a5204b96f45eeaf29bfa117a19995ce9"
   dependencies:
@@ -5683,6 +5679,10 @@ surge@latest:
     tar "1.0.0"
     tar.gz "0.1.1"
     url-parse-as-address "1.0.0"
+
+surge-ignore@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/surge-ignore/-/surge-ignore-0.2.0.tgz#5a7f8a20a71188cf9e75a2cfe8eb182de90daf3b"
 
 svgo@^0.7.0:
   version "0.7.1"

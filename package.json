@@ -20,7 +20,8 @@
     "react-dom": "15.4.2",
     "s3-website": "^3.0.0",
     "spectacle": "^2.0.0",
-    "spectacle-code-slide": "^0.3.1"
+    "spectacle-code-slide": "^0.3.1",
+    "surge": "^0.18.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
