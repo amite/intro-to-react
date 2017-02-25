@@ -351,17 +351,26 @@ export default class Presentation extends React.Component {
             margin="20px auto"
           />
         </Slide>
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+             Phases of a React Component Lifecycle
+          </Heading>
+          <Appear><ListItem>Initialization</ListItem></Appear>
+          <Appear><ListItem>Mounting</ListItem></Appear>
+          <Appear><ListItem>Updating</ListItem></Appear>
+          <Appear><ListItem>Unmounting</ListItem></Appear>
+        <Slide>
+          
+        </Slide>
 
         <Slide>
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-              Life Cycle of React Component
+              Life Cycle hooks for a React Component
           </Heading>
           <List>
             <Appear><ListItem>componentWillMount</ListItem></Appear>
             <Appear><ListItem>shouldComponentUpdate</ListItem></Appear>
             <Appear><ListItem>componentWillUpdate</ListItem></Appear>
             <Appear><ListItem>componentDidUpdate</ListItem></Appear>
-            <Appear><ListItem>componentWillReceiveProps</ListItem></Appear>
             <Appear><ListItem>componentWillUnmount</ListItem></Appear>
           </List>
 
