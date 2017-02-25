@@ -351,15 +351,17 @@ export default class Presentation extends React.Component {
             margin="20px auto"
           />
         </Slide>
+
+        <Slide>
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
              Phases of a React Component Lifecycle
           </Heading>
-          <Appear><ListItem>Initialization</ListItem></Appear>
-          <Appear><ListItem>Mounting</ListItem></Appear>
-          <Appear><ListItem>Updating</ListItem></Appear>
-          <Appear><ListItem>Unmounting</ListItem></Appear>
-        <Slide>
-          
+          <List>
+            <Appear><ListItem>Initialization</ListItem></Appear>
+            <Appear><ListItem>Mounting</ListItem></Appear>
+            <Appear><ListItem>Updating</ListItem></Appear>
+            <Appear><ListItem>Unmounting</ListItem></Appear>
+            </List>
         </Slide>
 
         <Slide>
