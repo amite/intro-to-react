@@ -17,6 +17,10 @@ Then, to start up the local server, run `npm start`
 
 Open a browser and hit [http://localhost:3009](http://localhost:3009), and you are ready to roll
 
+## Where is the source code for the presentation?
+
+Its in `presentation/index.js` 😁
+
 ## Build & Deployment
 
 Building the dist version of the project is as easy as running `npm run build`
