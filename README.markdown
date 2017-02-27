@@ -1,18 +1,21 @@
-# Spectacle Boilerplate
+# Intro to React presentation - with a lot help from the Spectacle Boilerplate
 
 ## Reference
 
 The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.markdown](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown).
 
-## Development
+## To run this presentation
 
-After downloading the boilerplate, your first order of business is to open terminal and run `yarn`. (or `npm install` if you're about that life)
+```
+git clone https://github.com/amite/intro-to-react.git
+```
 
 Next, run `rm -R .git` to remove the existing version control.
+Then, run `npm install`
 
 Then, to start up the local server, run `npm start`
 
-Open a browser and hit [http://localhost:3000](http://localhost:3000), and we are ready to roll
+Open a browser and hit [http://localhost:3009](http://localhost:3009), and you are ready to roll
 
 ## Build & Deployment
 
